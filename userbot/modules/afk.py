@@ -16,6 +16,7 @@ from userbot import (
     USERS,
     USER_AFK,
     ISAFK)
+
 from userbot.events import register
 
 AFKSTR = [
