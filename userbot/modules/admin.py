@@ -32,16 +32,16 @@ from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, bot
 from userbot.events import register
 
 # =================== CONSTANT ===================
-PP_TOO_SMOL = "`The image is too small`"
-PP_ERROR = "`Failure while processing the image`"
+PP_TOO_SMOL = "`The picture is too small`"
+PP_ERROR = "`Failure while processing your image`"
 NO_ADMIN = "`I am not an admin!`"
-NO_PERM = "`I don't have sufficient permissions!`"
+NO_PERM = "`I don't have sufficient permissions to do it!`"
 NO_SQL = "`Running on Non-SQL mode!`"
 
-CHAT_PP_CHANGED = "`Chat Picture Changed`"
-CHAT_PP_ERROR = "`Some issue with updating the pic,`" \
-                "`maybe coz I'm not an admin,`" \
-                "`or don't have enough rights.`"
+CHAT_PP_CHANGED = "`Chat Picture was Sussesfully changed`"
+CHAT_PP_ERROR = "`Some issue with updating the picture,`" \
+                "`maybe coz I'm not an admin ree..,`" \
+                "`or don't have enough permissions.`"
 INVALID_MEDIA = "`Invalid Extension`"
 
 BANNED_RIGHTS = ChatBannedRights(
@@ -79,7 +79,7 @@ async def set_group_photo(gpic):
     await gpic.edit("`Processing...`")
     await sleep(1)
     if not gpic.is_group:
-        await gpic.edit("`I don't think this is a group.`")
+        await gpic.edit("`I don't think this is a chat.`")
         return
     replymsg = await gpic.get_reply_message()
     chat = await gpic.get_chat()
@@ -133,10 +133,10 @@ async def promote(promt):
                                  delete_messages=True,
                                  pin_messages=True)
 
-    await promt.edit("`Promoting...`")
+    await promt.edit("`Promoting the user🚶...`")
     user, rank = await get_user_from_event(promt)
     if not rank:
-        rank = "Administrator"  # Just in case.
+        rank = "pro-admin"  # Just in case.
     if user:
         pass
     else:
@@ -146,7 +146,7 @@ async def promote(promt):
     try:
         await promt.client(
             EditAdminRequest(promt.chat_id, user.id, new_rights, rank))
-        await promt.edit("`Promoted Successfully!`")
+        await promt.edit("`Successfully promoted🥳!`")
         await sleep(3)
         await promt.delete()
 
@@ -177,7 +177,7 @@ async def demote(dmod):
         return
 
     # If passing, declare that we're going to demote
-    await dmod.edit("`Demoting...`")
+    await dmod.edit("`Demoting the user🚶‍♂️...`")
     rank = "admeme"  # dummy rank, lol.
     user = await get_user_from_event(dmod)
     user = user[0]
@@ -203,7 +203,7 @@ async def demote(dmod):
     except BadRequestError:
         await dmod.edit(NO_PERM)
         return
-    await dmod.edit("`Demoted Successfully!`")
+    await dmod.edit("`Sucessfully demoted!`")
     await sleep(3)
     await dmod.delete()
 
@@ -235,7 +235,7 @@ async def ban(bon):
         return
 
     # Announce that we're going to whack the pest
-    await bon.edit("`Whacking the pest!`")
+    await bon.edit("`banning the hammer`")
     await sleep(3)
     await bon.delete()
 
@@ -252,7 +252,7 @@ async def ban(bon):
             await reply.delete()
     except BadRequestError:
         await bon.edit(
-            "`I dont have message nuking rights! But still he was banned!`")
+            "`I dont have message nuking rights! But he was banned!`")
         return
     # Delete message and then tell that the command
     # is done gracefully
@@ -284,7 +284,7 @@ async def nothanos(unbon):
         return
 
     # If everything goes well...
-    await unbon.edit("`Unbanning...`")
+    await unbon.edit("`unbanning the rator`")
 
     user = await get_user_from_event(unbon)
     user = user[0]
@@ -296,7 +296,7 @@ async def nothanos(unbon):
     try:
         await unbon.client(
             EditBannedRequest(unbon.chat_id, user.id, UNBAN_RIGHTS))
-        await unbon.edit("```Unbanned Successfully```")
+        await unbon.edit("```Sucessfully unbanned```")
 
         await sleep(3)
         await unbon.delete()
@@ -306,7 +306,7 @@ async def nothanos(unbon):
                 f"USER: [{user.first_name}](tg://user?id={user.id})\n"
                 f"CHAT: {unbon.chat.title}(`{unbon.chat_id}`)")
     except UserIdInvalidError:
-        await unbon.edit("`Uh oh my unban logic broke!`")
+        await unbon.edit("`Uh oh unban my logic were broke!`")
 
 
 @register(outgoing=True, pattern="^.mute(?: |$)(.*)")
@@ -341,7 +341,7 @@ async def spider(spdr):
 
     if user.id == self_user.id:
         await spdr.edit(
-            "`Hands too short, can't duct tape myself...\n(ヘ･_･)ヘ┳━┳`")
+            "`Hands too short, can't duct mute myself...\n(ヘ･_･)ヘ┳━┳`")
         return
 
     # If everything goes well, do announcing and mute
@@ -355,9 +355,9 @@ async def spider(spdr):
 
             # Announce that the function is done
             if reason:
-                await spdr.edit(f"`Safely taped !!`\nReason: {reason}")
+                await spdr.edit(f"`Safely muted !!`\nReason: {reason}")
             else:
-                await spdr.edit("`Safely taped !!`")
+                await spdr.edit("`Safely mute !!`")
                 await sleep(3)
                 await spdr.delete()
             # Announce to logging group
@@ -406,11 +406,11 @@ async def unmoot(unmot):
         try:
             await unmot.client(
                 EditBannedRequest(unmot.chat_id, user.id, UNBAN_RIGHTS))
-            await unmot.edit("```Unmuted Successfully```")
+            await unmot.edit("```Succesfully unmuted```")
             await sleep(3)
             await unmot.delete()
         except UserIdInvalidError:
-            await unmot.edit("`Uh oh my unmute logic broke!`")
+            await unmot.edit("`Uh oh unmute my logic broke!`")
             return
 
         if BOTLOG:
@@ -485,7 +485,7 @@ async def ungmoot(un_gmute):
         await un_gmute.edit("`Error! User probably not gmuted.`")
     else:
         # Inform about success
-        await un_gmute.edit("```Ungmuted Successfully```")
+        await un_gmute.edit("```Sucessfully ungmuted```")
 
         if BOTLOG:
             await un_gmute.client.send_message(
