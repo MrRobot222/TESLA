@@ -88,7 +88,7 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN") or None
 UPSTREAM_REPO_URL = (os.environ.get("UPSTREAM_REPO_URL")
                      or "https://github.com/MrRobot222/TESLA.git")
 UPSTREAM_REPO_BRANCH = os.environ.get("UPSTREAM_REPO_BRANCH") or "devil"
-
+UPSTREAM_REPO_TEST_BRANCH = "demon"
 # Console verbose logging
 CONSOLE_LOGGER_VERBOSE = sb(os.environ.get(
     "CONSOLE_LOGGER_VERBOSE") or "False")
