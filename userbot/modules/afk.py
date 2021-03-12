@@ -14,9 +14,7 @@ from userbot import (
     BOTLOG_CHATID,
     PM_AUTO_BAN,
     USERS,
-    USER_AFK,
     ISAFK)
-
 from userbot.events import register
 
 AFKSTR = [
