@@ -151,9 +151,9 @@ async def upstream(event):
         origin = repo.create_remote('upstream', off_repo)
         origin.fetch()
         force_update = True
-        repo.create_head('demon', origin.refs.master)
-        repo.heads.master.set_tracking_branch(origin.refs.master)
-        repo.heads.master.checkout(True)
+        repo.create_head('demon', origin.refs.devil)
+        repo.heads.devil.set_tracking_branch(origin.refs.devil)
+        repo.heads.devil.checkout(True)
 
     ac_br = repo.active_branch.name
     if ac_br != UPSTREAM_REPO_BRANCH:
