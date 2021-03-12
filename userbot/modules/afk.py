@@ -12,10 +12,7 @@ from userbot import (
     CMD_HELP,
     BOTLOG,
     BOTLOG_CHATID,
-    PM_AUTO_BAN,
-    ISAFK,
-    USERS,
-    COUNT_MSG)
+    PM_AUTO_BAN)
 from userbot.events import register
 
 AFKSTR = [
