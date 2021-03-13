@@ -22,7 +22,8 @@ from userbot import (
     HEROKU_API_KEY,
     HEROKU_APP_NAME,
     UPSTREAM_REPO_URL,
-    UPSTREAM_REPO_BRANCH)
+    UPSTREAM_REPO_BRANCH,
+    UPSTREAM_REPO_TEST_BRANCH)
 from userbot.events import register
 
 requirements_path = path.join(
@@ -176,7 +177,8 @@ async def upstream(event):
 
     if changelog == '' and force_update is False:
         await event.edit(
-            f'\n`Your USERBOT is`  **up-to-date**  `with`  **{UPSTREAM_REPO_BRANCH}**\n')
+            f'\n`Your USERBOT is`  **up-to-date**  `with`  **{UPSTREAM_REPO_BRANCH}**\n'
+            f'\n`For More updated and info join` (Tesla Reborn)[https://t.me/reborn_tesla]')
         return repo.__del__()
 
     if conf is None and force_update is False:

@@ -141,8 +141,9 @@ def register(**args):
 
                     if LOGSPAMMER:
                         await check.respond(
-                            "`Oh Fuck My userbot has crashed.\
-                        \nThe error logs are stored in the userbot's log chat.`"
+                            "`Oh I'm sorry for the inconvenience. \
+                            \n`My UserBot got crashed now, let me check that.`"
+                            "\nThe error logs are stored in the userbot's log chat.`"
                         )
 
                     await check.client.send_file(send_to,

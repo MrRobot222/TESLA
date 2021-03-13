@@ -23,5 +23,5 @@ with TelegramClient(StringSession(), API_KEY, API_HASH) as client:
 
 <code>STRING_SESSION</code>: <code>{}</code>
 
-⚠️ <i>Nothing Just a warning to you not to fucking share with anyone</i>""".format(session_string)
+⚠️ <i>Warning Do'nt share this with anyone, this is cofidential </i>""".format(session_string)
     client.send_message("me", saved_messages_template, parse_mode="html")
