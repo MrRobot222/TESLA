@@ -7,7 +7,9 @@
 
 from telethon.sync import TelegramClient
 from telethon.sessions import StringSession
-
+from userbot import API_KEY
+ 
+print (API_KEY)
 print("""Please go-to my.telegram.org
 Login using your Telegram account
 Click on API Development Tools
@@ -21,7 +23,8 @@ with TelegramClient(StringSession(), API_KEY, API_HASH) as client:
     session_string = client.session.save()
     saved_messages_template = """Support: @PROJECT_TESLA_FORKED
 
-<code>STRING_SESSION</code>: <code>{}</code>
+                                <code>STRING_SESSION</code>: <code>{}</code>
 
-⚠️ <i>Warning Do'nt share this with anyone, this is cofidential </i>""".format(session_string)
+                            ⚠️ <i>Warning Do'nt share this with anyone, this is cofidential </i>""".format(session_string)
+
     client.send_message("me", saved_messages_template, parse_mode="html")
