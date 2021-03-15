@@ -2,6 +2,7 @@
 
 <div align=center><img src="logo.gif" alt="Logo"></div>
 
+
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 
 
@@ -21,17 +22,16 @@
 /**
 ```
 
-## How To Host?
-
-The easiest way to deploy this great bot! is click on button below
-Make sure you have an account of heroku and follow all the steps required.
 
 Deploy to Heroku:
 <p align="left"><a href="https://heroku.com/deploy?template=https://github.com/MrRobot222/TESLA"> <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heroku" /></a></p>
 
+# Wiki 
+
+For installation, deployment and User guide visit [Wiki](https://github.com/MrRobot222/TESLA/wiki) Page
 ## Groups and support
 
-if you want new features, or announcements, you can follow our [TESLA](https://t.me/reborn_tesla) Group.
+If you want new features, or announcements, you can follow our [TESLA](https://t.me/reborn_tesla) Group.
 
 
 
@@ -52,6 +52,3 @@ I can't mention everyone here, there a lot of guys behind this work and I thank 
 
 This userbot licensed on [Raphielscape Public License](https://github.com/MrRobot222/TESLA/blol/master/LICENSE) - Version 1.d, February 2020
 
-Every graphics of this bot is copyrighted by Joker Hacker ,
-
-Joker Hacker is also a copyrighted term.
