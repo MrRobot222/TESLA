@@ -26,7 +26,7 @@ except PhoneNumberInvalidError:
 for module_name in ALL_MODULES:
     imported_module = import_module("userbot.modules." + module_name)
 
-LOGS.info("You are running TESLA [v1.0.1]")
+LOGS.info("You are running TESLA [v1.0.3]")
 
 LOGS.info(
     "Congratulations, your userbot is now running Sussesfully !! Test it by typing .ping / .on in any chat."
