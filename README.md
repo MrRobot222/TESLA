@@ -59,5 +59,5 @@ Thanks for all :
 I can't mention everyone here, there a lot of guys behind this work and I thank everyone.
 ## License
 
-This userbot licensed on [Raphielscape Public License](https://github.com/MrRobot222/TESLA/blol/master/LICENSE) - Version 1.d, February 2020
+This userbot licensed on [Raphielscape Public License](https://github.com/MrRobot222/TESLA/blob/devil/LICENSE) - Version 1.d, February 2020
 

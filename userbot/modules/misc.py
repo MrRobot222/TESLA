@@ -73,15 +73,14 @@ async def killdabot(event):
 async def bot_community(community):
     """ For .community command, just returns OG Paperplane's group link. """
     await community.edit(
-        "Join ElytrA8's awesome userbot community: @PROJECT_TESLA")
+        "Join ElytrA8's awesome userbot community: @support_tesla")
 
 
 @register(outgoing=True, pattern="^.support$")
 async def bot_support(wannahelp):
     """ For .support command, just returns the group link. """
     await wannahelp.edit(
-        "Join PROJECT TESLA Group : @PROJECT_TESLA \
-        \nJoin Userbot offtopic Support Group: @ElytrA8CT")
+        "\nJoin Userbot offtopic Support Group: @ElytrA8CT")
 
 
 @register(outgoing=True, pattern="^.creator$")
@@ -89,14 +88,14 @@ async def creator(ereee):
     """ See who create this userbot. """
     await ereee.edit(
         "Creator of this userbot:"
-        "\n• ⚡ [ElytrA8](https://github.com/ElytrA8) ⚡")
+        "\n• ⚡ [Mr Robot](https://github.com/MrRobot222) ⚡")
 
 
 @register(outgoing=True, pattern="^.readme$")
 async def reedme(e):
     await e.edit(
         "Here's something for you to read:\n"
-        "\n[TESLA's README.md file](https://github.com/ElytrA8/TESLA/blob/TESLA/README.md)")
+        "\n[TESLA's README.md file](https://github.com/MrRobot222/TESLA/blob/devil/README.md)")
 
 
 # Copyright (c) Gegham Zakaryan | 2019
@@ -118,7 +117,7 @@ async def repeat(rep):
 async def repo_is_here(wannasee):
     """ For .repo command, just returns the repo URL. """
     await wannasee.edit(
-        "[Click here](https://github.com/ElytrA8/TESLA) to open TESLA GitHub page."
+        "[Click here](https://github.com/MrRobot222/TESLA) to open TESLA GitHub page."
     )
 
 

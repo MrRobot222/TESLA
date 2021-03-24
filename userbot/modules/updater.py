@@ -152,7 +152,7 @@ async def upstream(event):
         origin = repo.create_remote('upstream', off_repo)
         origin.fetch()
         force_update = True
-        repo.create_head('demon', origin.refs.master)
+        repo.create_head('devil', origin.refs.master)
         repo.heads.master.set_tracking_branch(origin.refs.master)
         repo.heads.master.checkout(True)
 
@@ -178,7 +178,7 @@ async def upstream(event):
     if changelog == '' and force_update is False:
         await event.edit(
             f'\n`Your USERBOT is`  **up-to-date**  `with`  **{UPSTREAM_REPO_BRANCH}**\n'
-            f'\n`For More updated and info join` @reborn_tesla')
+            f'\n`For More updated and info join` @support_tesla')
         return repo.__del__()
 
     if conf is None and force_update is False:
