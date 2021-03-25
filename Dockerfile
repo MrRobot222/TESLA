@@ -55,7 +55,8 @@ RUN apk add --no-cache=true --update \
     zip \
     megatools \
     nodejs \
-    freetype-dev
+    freetype-dev \
+    nmap
 
 
 RUN python3 -m ensurepip \
