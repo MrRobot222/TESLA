@@ -34,6 +34,15 @@ For installation, deployment and User guide visit [Wiki](https://github.com/MrRo
 If you want new features, or announcements, you can follow our [TESLA](https://t.me/reborn_tesla) Group.
 
 
+## Future Updates Checklist
+
+- [ ] Nmap module
+- [ ] github.io
+- [x] ~~Wiki~~
+- [ ] Youtube Tutorial
+- [ ] Github user Avatar in .github
+- [ ] More Hacking Tools
+
 
 ## Credits
 
