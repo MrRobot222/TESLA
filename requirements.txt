@@ -2,7 +2,7 @@ aiohttp
 aria2p
 async_generator
 bs4
-python3-nmap
+python-nmap
 cowpy
 cffi>=1.0.0
 coffeehouse
